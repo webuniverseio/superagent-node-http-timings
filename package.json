@@ -1,0 +1,31 @@
+{
+  "name": "superagent-node-http-timings",
+  "version": "0.0.0",
+  "description": "Superagent plugin for measuring http timings in node.js",
+  "repository": {
+    "url": "https://github.com/webuniverseio/superagent-node-http-timings",
+    "type": "git"
+  },
+  "engines": {
+    "node": ">=6.5.0"
+  },
+  "main": "index.js",
+  "peerDependencies": {
+    "superagent": "*"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "np": "^5.1.3",
+    "superagent": "^5.1.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "release": "np"
+  },
+  "license": "MIT",
+  "keywords": [
+    "superagent",
+    "timings",
+    "http"
+  ]
+}

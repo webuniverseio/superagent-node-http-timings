@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GIVEN plugin was used WHEN response arrives THEN callback should get timings information timings 1`] = `
+Object {
+  "status": "number",
+  "timings": Object {
+    "contentTransfer": "number",
+    "dnsLookup": "number",
+    "firstByte": "number",
+    "socketAssigned": "number",
+    "tcpConnection": "number",
+    "tlsHandshake": "number",
+    "total": "number",
+  },
+  "url": "string",
+}
+`;
