@@ -59,11 +59,12 @@ function getTimings (eventTimes) {
     // There is no DNS lookup with IP address
     dnsLookup: eventTimes.dnsLookupAt !== undefined ?
                getHrTimeDurationInMs(eventTimes.socketAssigned, eventTimes.dnsLookupAt) : undefined,
-    tcpConnection: getHrTimeDurationInMs(eventTimes.dnsLookupAt || eventTimes.socketAssigned, eventTimes.tcpConnectionAt),
+    tcpConnection: eventTimes.tcpConnectionAt !== undefined ?
+                getHrTimeDurationInMs(eventTimes.dnsLookupAt || eventTimes.socketAssigned, eventTimes.tcpConnectionAt) : undefined,
     // There is no TLS handshake without https
     tlsHandshake: eventTimes.tlsHandshakeAt !== undefined ?
                   (getHrTimeDurationInMs(eventTimes.tcpConnectionAt, eventTimes.tlsHandshakeAt)) : undefined,
-    firstByte: getHrTimeDurationInMs((eventTimes.tlsHandshakeAt || eventTimes.tcpConnectionAt), eventTimes.firstByteAt),
+    firstByte: getHrTimeDurationInMs((eventTimes.tlsHandshakeAt || eventTimes.tcpConnectionAt || eventTimes.socketAssigned), eventTimes.firstByteAt),
     contentTransfer: getHrTimeDurationInMs(eventTimes.firstByteAt, eventTimes.endAt),
     total: getHrTimeDurationInMs(eventTimes.startAt, eventTimes.endAt)
   }
