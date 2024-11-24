@@ -15,3 +15,19 @@ Object {
   "url": "string",
 }
 `;
+
+exports[`GIVEN plugin was used WHEN response arrives THEN callback should get timings information works with reusable keepAlive agent, we simply call the same request again with the same agent 1`] = `
+Object {
+  "status": "number",
+  "timings": Object {
+    "contentTransfer": "number",
+    "dnsLookup": "undefined",
+    "firstByte": "number",
+    "socketAssigned": "number",
+    "tcpConnection": "undefined",
+    "tlsHandshake": "undefined",
+    "total": "number",
+  },
+  "url": "string",
+}
+`;
