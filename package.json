@@ -1,6 +1,6 @@
 {
   "name": "superagent-node-http-timings",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Superagent plugin for measuring http timings in node.js",
   "repository": {
     "url": "https://github.com/webuniverseio/superagent-node-http-timings",
